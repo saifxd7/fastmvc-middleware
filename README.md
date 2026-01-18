@@ -4,21 +4,28 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://github.com/hyyre/fastmvc-middleware/actions/workflows/ci.yml/badge.svg)](https://github.com/hyyre/fastmvc-middleware/actions)
-[![Coverage](https://img.shields.io/badge/coverage-82%25-green.svg)](https://github.com/hyyre/fastmvc-middleware)
+[![Coverage](https://img.shields.io/badge/coverage-41%25-yellow.svg)](https://github.com/hyyre/fastmvc-middleware)
 
 **Production-ready middleware collection for FastAPI/Starlette applications.**
 
-A comprehensive set of 16 battle-tested, configurable middleware components for building robust APIs with security, observability, rate limiting, caching, and authentication built-in.
+A comprehensive set of **94+ battle-tested, configurable middleware components** for building robust APIs with security, observability, rate limiting, caching, authentication, and much more built-in.
 
 ## ✨ Features
 
 | Category | Middlewares |
 |----------|-------------|
-| 🔒 **Security** | Security Headers, Trusted Host, CORS, Authentication |
-| 📊 **Observability** | Logging, Timing, Request ID, Request Context, Metrics |
-| 🛡️ **Resilience** | Rate Limiting, Error Handling, Idempotency |
-| ⚡ **Performance** | Compression, Caching |
-| 🔧 **Operations** | Health Checks, Maintenance Mode |
+| 🔒 **Security** | Security Headers, CORS, CSRF, HTTPS Redirect, IP Filter, Trusted Host, Webhook Validation, Permissions Policy, Referrer Policy, CSP Reports, Honeypot, Sanitization, Replay Prevention, Request Signing |
+| 🔐 **Authentication** | JWT, API Key, Basic Auth, Bearer Token, OAuth Scopes, Route-based Auth |
+| 📊 **Observability** | Logging, Timing, Request ID, Request Context, Metrics, Profiling, Audit, Server-Timing, Cost Tracking, Request Sampler |
+| 🛡️ **Resilience** | Rate Limiting, Circuit Breaker, Bulkhead, Load Shedding, Graceful Shutdown, Timeout, Error Handling |
+| ⚡ **Performance** | Compression, Caching, ETag, Response Cache, Request Coalescing, Deduplication, Bandwidth Throttling |
+| 🔧 **Operations** | Health Checks, Maintenance Mode, Warmup, Chaos Engineering, Slow Response (testing) |
+| 🌐 **API Management** | Versioning, Deprecation, Retry-After, HATEOAS, Content Negotiation, JSON Schema Validation |
+| 👤 **Detection** | Bot Detection, User Agent Parsing, GeoIP, Client Hints, Request Fingerprinting |
+| 🧪 **Testing** | A/B Testing, Feature Flags, Chaos Injection |
+| 🌍 **Localization** | Locale, Accept-Language, Content Negotiation |
+| 🔀 **Routing** | Path Rewrite, Redirect, Proxy, Method Override, Trailing Slash |
+| 🆔 **Context** | Session, Tenant, Correlation ID, Request ID Propagation |
 
 ## 📦 Installation
 
