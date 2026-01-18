@@ -91,11 +91,11 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/hyyre/fastmvc-middleware"
-Documentation = "https://github.com/hyyre/fastmvc-middleware#readme"
-Repository = "https://github.com/hyyre/fastmvc-middleware"
-Issues = "https://github.com/hyyre/fastmvc-middleware/issues"
-Changelog = "https://github.com/hyyre/fastmvc-middleware/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/shregar1/fastmvc-middleware"
+Documentation = "https://github.com/shregar1/fastmvc-middleware#readme"
+Repository = "https://github.com/shregar1/fastmvc-middleware"
+Issues = "https://github.com/shregar1/fastmvc-middleware/issues"
+Changelog = "https://github.com/shregar1/fastmvc-middleware/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.sdist]
 include = [

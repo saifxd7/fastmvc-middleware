@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/fastmvc-middleware.svg)](https://badge.fury.io/py/fastmvc-middleware)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/hyyre/fastmvc-middleware/actions/workflows/ci.yml/badge.svg)](https://github.com/hyyre/fastmvc-middleware/actions)
+[![Tests](https://github.com/shregar1/fastmvc-middleware/actions/workflows/ci.yml/badge.svg)](https://github.com/shregar1/fastmvc-middleware/actions)
 
 **Production-ready middleware collection for FastAPI/Starlette applications.**
 

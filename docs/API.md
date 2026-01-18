@@ -366,5 +366,5 @@ print(FastMiddleware.__version__)  # "0.5.0"
 print(FastMiddleware.__author__)   # "Shiv"
 print(FastMiddleware.__email__)    # "shiv@hyyre.dev"
 print(FastMiddleware.__license__)  # "MIT"
-print(FastMiddleware.__url__)      # "https://github.com/hyyre/fastmvc-middleware"
+print(FastMiddleware.__url__)      # "https://github.com/shregar1/fastmvc-middleware"
 ```

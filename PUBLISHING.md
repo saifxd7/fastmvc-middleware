@@ -123,7 +123,7 @@ git push origin v0.5.0
 
 ### 2. Create GitHub Release
 
-Go to https://github.com/hyyre/fastmvc-middleware/releases/new and:
+Go to https://github.com/shregar1/fastmvc-middleware/releases/new and:
 - Select the tag
 - Add release notes from CHANGELOG.md
 - Upload the dist files

@@ -333,7 +333,7 @@ def function(arg1: str, arg2: int = 0) -> bool:
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/hyyre/fastmvc-middleware/discussions)
-- Check existing [Issues](https://github.com/hyyre/fastmvc-middleware/issues)
+- Open a [Discussion](https://github.com/shregar1/fastmvc-middleware/discussions)
+- Check existing [Issues](https://github.com/shregar1/fastmvc-middleware/issues)
 
 Thank you for contributing! 🎉

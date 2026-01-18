@@ -79,7 +79,7 @@ dev:
 
 # Documentation
 docs-serve:
-	@echo "Documentation available at: https://github.com/hyyre/fastmvc-middleware#readme"
+	@echo "Documentation available at: https://github.com/shregar1/fastmvc-middleware#readme"
 
 # Version bump helpers
 version-patch:
