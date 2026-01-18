@@ -31,7 +31,7 @@ class MetricsConfig:
     
     Example:
         ```python
-        from fastMiddleware import MetricsConfig
+        from FastMiddleware import MetricsConfig
         
         config = MetricsConfig(
             metrics_path="/metrics",
@@ -220,7 +220,7 @@ class MetricsMiddleware(BaseHTTPMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import MetricsMiddleware, MetricsConfig
+        from FastMiddleware import MetricsMiddleware, MetricsConfig
         
         app = FastAPI()
         

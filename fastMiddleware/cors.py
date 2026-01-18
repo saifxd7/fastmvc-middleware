@@ -25,7 +25,7 @@ class CORSMiddleware(StarletteCORSMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import CORSMiddleware
+        from FastMiddleware import CORSMiddleware
         
         app = FastAPI()
         

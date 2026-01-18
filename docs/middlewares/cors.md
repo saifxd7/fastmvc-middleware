@@ -5,14 +5,14 @@ Cross-Origin Resource Sharing (CORS) middleware for handling browser security re
 ## Installation
 
 ```python
-from fastMiddleware import CORSMiddleware
+from FastMiddleware import CORSMiddleware
 ```
 
 ## Quick Start
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import CORSMiddleware
+from FastMiddleware import CORSMiddleware
 
 app = FastAPI()
 

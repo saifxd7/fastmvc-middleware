@@ -11,7 +11,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _hints_ctx: ContextVar[Dict[str, Any]] = ContextVar("client_hints", default={})
@@ -53,7 +53,7 @@ class ClientHintsMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ClientHintsMiddleware, get_client_hints
+        from FastMiddleware import ClientHintsMiddleware, get_client_hints
         
         app.add_middleware(
             ClientHintsMiddleware,

@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -37,7 +37,7 @@ class XFFTrustMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import XFFTrustMiddleware
+        from FastMiddleware import XFFTrustMiddleware
         
         app.add_middleware(
             XFFTrustMiddleware,

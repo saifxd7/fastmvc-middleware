@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict, Any, Type
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -41,7 +41,7 @@ class ExceptionHandlerMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ExceptionHandlerMiddleware
+        from FastMiddleware import ExceptionHandlerMiddleware
         
         handler = ExceptionHandlerMiddleware(
             app,

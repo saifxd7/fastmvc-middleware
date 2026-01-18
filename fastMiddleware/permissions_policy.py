@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -53,7 +53,7 @@ class PermissionsPolicyMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import PermissionsPolicyMiddleware
+        from FastMiddleware import PermissionsPolicyMiddleware
         
         app.add_middleware(
             PermissionsPolicyMiddleware,

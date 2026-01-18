@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import HATEOASMiddleware, HATEOASConfig, Link
+from FastMiddleware import HATEOASMiddleware, HATEOASConfig, Link
 
 app = FastAPI()
 

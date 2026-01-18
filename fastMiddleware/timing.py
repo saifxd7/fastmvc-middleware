@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 class TimingMiddleware(FastMVCMiddleware):
@@ -29,7 +29,7 @@ class TimingMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import TimingMiddleware
+        from FastMiddleware import TimingMiddleware
         
         app = FastAPI()
         

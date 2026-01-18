@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict, Any
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -27,7 +27,7 @@ class ResponseFormatConfig:
     
     Example:
         ```python
-        from fastMiddleware import ResponseFormatConfig
+        from FastMiddleware import ResponseFormatConfig
         
         config = ResponseFormatConfig(
             wrap_responses=True,
@@ -64,7 +64,7 @@ class ResponseFormatMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import ResponseFormatMiddleware
+        from FastMiddleware import ResponseFormatMiddleware
         
         app = FastAPI()
         

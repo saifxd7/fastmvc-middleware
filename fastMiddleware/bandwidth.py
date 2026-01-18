@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict, AsyncIterator
 from starlette.requests import Request
 from starlette.responses import Response, StreamingResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -39,7 +39,7 @@ class BandwidthMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import BandwidthMiddleware
+        from FastMiddleware import BandwidthMiddleware
         
         app.add_middleware(
             BandwidthMiddleware,

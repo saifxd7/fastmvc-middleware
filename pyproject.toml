@@ -99,7 +99,7 @@ Changelog = "https://github.com/hyyre/fastmvc-middleware/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "/fastMiddleware",
+    "/FastMiddleware",
     "/LICENSE",
     "/README.md",
     "/CHANGELOG.md",
@@ -118,13 +118,13 @@ exclude = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["fastMiddleware"]
+packages = ["FastMiddleware"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
-addopts = "-v --cov=fastMiddleware --cov-report=term-missing --strict-markers"
+addopts = "-v --cov=FastMiddleware --cov-report=term-missing --strict-markers"
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
     "integration: marks tests as integration tests",
@@ -201,7 +201,7 @@ ignore = [
 "__init__.py" = ["F401", "E402"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["fastMiddleware"]
+known-first-party = ["FastMiddleware"]
 force-single-line = false
 lines-after-imports = 2
 
@@ -212,7 +212,7 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.coverage.run]
-source = ["fastMiddleware"]
+source = ["FastMiddleware"]
 branch = true
 parallel = true
 omit = [
@@ -231,7 +231,7 @@ exclude_lines = [
     "class .*\\bProtocol\\):",
     "\\.\\.\\.",
 ]
-fail_under = 40
+fail_under = 65
 show_missing = true
 skip_covered = false
 
@@ -241,7 +241,7 @@ directory = "htmlcov"
 [tool.bandit]
 exclude_dirs = ["tests", "venv", ".venv"]
 skips = ["B101"]  # assert used
-targets = ["fastMiddleware"]
+targets = ["FastMiddleware"]
 
 [tool.bandit.assert_used]
 skips = ["**/test_*.py", "**/tests.py"]

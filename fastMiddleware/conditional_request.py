@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -37,7 +37,7 @@ class ConditionalRequestMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ConditionalRequestMiddleware
+        from FastMiddleware import ConditionalRequestMiddleware
         
         app.add_middleware(ConditionalRequestMiddleware)
         

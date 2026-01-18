@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict, List, Any
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -47,7 +47,7 @@ class RouteAuthMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RouteAuthMiddleware, RouteAuth
+        from FastMiddleware import RouteAuthMiddleware, RouteAuth
         
         app.add_middleware(
             RouteAuthMiddleware,

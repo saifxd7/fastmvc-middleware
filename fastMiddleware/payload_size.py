@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -39,7 +39,7 @@ class PayloadSizeMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import PayloadSizeMiddleware
+        from FastMiddleware import PayloadSizeMiddleware
         
         app.add_middleware(
             PayloadSizeMiddleware,

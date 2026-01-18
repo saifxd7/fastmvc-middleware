@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict, Any
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -37,7 +37,7 @@ class RequestCoalescingMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestCoalescingMiddleware
+        from FastMiddleware import RequestCoalescingMiddleware
         
         app.add_middleware(
             RequestCoalescingMiddleware,

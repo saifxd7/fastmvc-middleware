@@ -11,7 +11,7 @@ from starlette.requests import Request
 from starlette.responses import Response
 from starlette.datastructures import MutableHeaders
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -28,7 +28,7 @@ class HeaderTransformConfig:
     
     Example:
         ```python
-        from fastMiddleware import HeaderTransformConfig
+        from FastMiddleware import HeaderTransformConfig
         
         config = HeaderTransformConfig(
             add_response_headers={
@@ -63,7 +63,7 @@ class HeaderTransformMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import HeaderTransformMiddleware
+        from FastMiddleware import HeaderTransformMiddleware
         
         app = FastAPI()
         

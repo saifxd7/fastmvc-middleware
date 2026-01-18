@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict, Any, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -53,7 +53,7 @@ class SanitizationMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import SanitizationMiddleware
+        from FastMiddleware import SanitizationMiddleware
         
         app.add_middleware(
             SanitizationMiddleware,

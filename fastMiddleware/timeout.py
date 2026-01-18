@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -27,7 +27,7 @@ class TimeoutConfig:
     
     Example:
         ```python
-        from fastMiddleware import TimeoutConfig
+        from FastMiddleware import TimeoutConfig
         
         config = TimeoutConfig(
             default_timeout=30.0,
@@ -61,7 +61,7 @@ class TimeoutMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import TimeoutMiddleware, TimeoutConfig
+        from FastMiddleware import TimeoutMiddleware, TimeoutConfig
         
         app = FastAPI()
         

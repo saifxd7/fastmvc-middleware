@@ -5,14 +5,14 @@ HTTP caching with ETag generation, conditional requests (304), and cache control
 ## Installation
 
 ```python
-from fastMiddleware import CacheMiddleware, CacheConfig, InMemoryCacheStore
+from FastMiddleware import CacheMiddleware, CacheConfig, InMemoryCacheStore
 ```
 
 ## Quick Start
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import CacheMiddleware
+from FastMiddleware import CacheMiddleware
 
 app = FastAPI()
 
@@ -47,7 +47,7 @@ Vary: Accept, Accept-Encoding
 ### Basic Caching
 
 ```python
-from fastMiddleware import CacheMiddleware, CacheConfig
+from FastMiddleware import CacheMiddleware, CacheConfig
 
 config = CacheConfig(
     default_max_age=300,  # 5 minutes
@@ -188,7 +188,7 @@ Cache-Control: no-store, no-cache, must-revalidate
 For distributed caching:
 
 ```python
-from fastMiddleware import CacheStore
+from FastMiddleware import CacheStore
 
 class RedisCacheStore(CacheStore):
     def __init__(self, redis_client):

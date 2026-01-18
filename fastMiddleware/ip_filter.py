@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, List
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -29,7 +29,7 @@ class IPFilterConfig:
     
     Example:
         ```python
-        from fastMiddleware import IPFilterConfig
+        from FastMiddleware import IPFilterConfig
         
         # Whitelist mode
         config = IPFilterConfig(
@@ -68,7 +68,7 @@ class IPFilterMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import IPFilterMiddleware, IPFilterConfig
+        from FastMiddleware import IPFilterMiddleware, IPFilterConfig
         
         app = FastAPI()
         

@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -28,7 +28,7 @@ class ETagConfig:
     
     Example:
         ```python
-        from fastMiddleware import ETagConfig
+        from FastMiddleware import ETagConfig
         
         config = ETagConfig(
             weak_etag=False,
@@ -60,7 +60,7 @@ class ETagMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import ETagMiddleware
+        from FastMiddleware import ETagMiddleware
         
         app = FastAPI()
         

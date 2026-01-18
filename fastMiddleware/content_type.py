@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -26,7 +26,7 @@ class ContentTypeConfig:
     
     Example:
         ```python
-        from fastMiddleware import ContentTypeConfig
+        from FastMiddleware import ContentTypeConfig
         
         config = ContentTypeConfig(
             allowed_types={
@@ -63,7 +63,7 @@ class ContentTypeMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import ContentTypeMiddleware
+        from FastMiddleware import ContentTypeMiddleware
         
         app = FastAPI()
         

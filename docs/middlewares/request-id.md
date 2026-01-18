@@ -5,14 +5,14 @@ Generates unique request identifiers for distributed tracing and request correla
 ## Installation
 
 ```python
-from fastMiddleware import RequestIDMiddleware
+from FastMiddleware import RequestIDMiddleware
 ```
 
 ## Quick Start
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import RequestIDMiddleware
+from FastMiddleware import RequestIDMiddleware
 
 app = FastAPI()
 
@@ -140,7 +140,7 @@ async def root(request_id: str = Depends(get_request_id)):
 ### In Services/Repositories
 
 ```python
-from fastMiddleware import get_request_id
+from FastMiddleware import get_request_id
 
 async def my_service_function():
     request_id = get_request_id()
@@ -235,7 +235,7 @@ async def create_ticket(request: Request, issue: str):
 ### With Logging
 
 ```python
-from fastMiddleware import RequestIDMiddleware, LoggingMiddleware
+from FastMiddleware import RequestIDMiddleware, LoggingMiddleware
 
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(RequestIDMiddleware)
@@ -246,7 +246,7 @@ app.add_middleware(RequestIDMiddleware)
 ### With Request Context
 
 ```python
-from fastMiddleware import RequestIDMiddleware, RequestContextMiddleware
+from FastMiddleware import RequestIDMiddleware, RequestContextMiddleware
 
 app.add_middleware(RequestContextMiddleware)
 app.add_middleware(RequestIDMiddleware)

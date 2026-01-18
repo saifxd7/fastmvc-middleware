@@ -13,7 +13,7 @@ import time
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _cost_ctx: ContextVar[float] = ContextVar("request_cost", default=0.0)
@@ -62,7 +62,7 @@ class CostTrackingMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import CostTrackingMiddleware, add_cost
+        from FastMiddleware import CostTrackingMiddleware, add_cost
         
         app.add_middleware(
             CostTrackingMiddleware,

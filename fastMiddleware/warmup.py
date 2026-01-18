@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, List
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -44,7 +44,7 @@ class WarmupMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import WarmupMiddleware
+        from FastMiddleware import WarmupMiddleware
         
         warmup = WarmupMiddleware(
             app,

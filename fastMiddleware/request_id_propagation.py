@@ -12,7 +12,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _request_ids_ctx: ContextVar[List[str]] = ContextVar("request_ids", default=[])
@@ -59,7 +59,7 @@ class RequestIDPropagationMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestIDPropagationMiddleware, get_request_ids
+        from FastMiddleware import RequestIDPropagationMiddleware, get_request_ids
         
         app.add_middleware(RequestIDPropagationMiddleware)
         

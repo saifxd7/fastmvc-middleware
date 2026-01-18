@@ -11,7 +11,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _real_ip_ctx: ContextVar[str | None] = ContextVar("real_ip", default=None)
@@ -49,7 +49,7 @@ class RealIPMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RealIPMiddleware, get_real_ip
+        from FastMiddleware import RealIPMiddleware, get_real_ip
         
         app.add_middleware(RealIPMiddleware)
         

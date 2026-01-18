@@ -21,7 +21,7 @@ pip install fastmvc-middleware
 ```python
 from fastapi import FastAPI
 import os
-from fastMiddleware import ChaosMiddleware, ChaosConfig
+from FastMiddleware import ChaosMiddleware, ChaosConfig
 
 app = FastAPI()
 

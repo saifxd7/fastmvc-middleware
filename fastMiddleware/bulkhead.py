@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -46,7 +46,7 @@ class BulkheadMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import BulkheadMiddleware
+        from FastMiddleware import BulkheadMiddleware
         
         app.add_middleware(
             BulkheadMiddleware,

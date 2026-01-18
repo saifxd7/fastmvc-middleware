@@ -11,7 +11,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _context: ContextVar[Dict[str, Any]] = ContextVar("request_context", default={})
@@ -57,7 +57,7 @@ class ContextMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ContextMiddleware, get_context_value
+        from FastMiddleware import ContextMiddleware, get_context_value
         
         app.add_middleware(
             ContextMiddleware,

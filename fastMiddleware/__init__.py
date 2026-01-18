@@ -5,98 +5,98 @@ A comprehensive collection of 90+ battle-tested, configurable middleware compone
 for building robust FastAPI/Starlette applications.
 """
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 # ============================================================================
 # Core Middlewares
 # ============================================================================
-from fastMiddleware.cors import CORSMiddleware
-from fastMiddleware.logging import LoggingMiddleware
-from fastMiddleware.timing import TimingMiddleware
-from fastMiddleware.request_id import RequestIDMiddleware
+from FastMiddleware.cors import CORSMiddleware
+from FastMiddleware.logging import LoggingMiddleware
+from FastMiddleware.timing import TimingMiddleware
+from FastMiddleware.request_id import RequestIDMiddleware
 
 # ============================================================================
 # Security Middlewares
 # ============================================================================
-from fastMiddleware.security import SecurityHeadersMiddleware, SecurityHeadersConfig
-from fastMiddleware.trusted_host import TrustedHostMiddleware
-from fastMiddleware.csrf import CSRFMiddleware, CSRFConfig
-from fastMiddleware.https_redirect import HTTPSRedirectMiddleware, HTTPSRedirectConfig
-from fastMiddleware.ip_filter import IPFilterMiddleware, IPFilterConfig
-from fastMiddleware.origin import OriginMiddleware, OriginConfig
-from fastMiddleware.webhook import WebhookMiddleware, WebhookConfig
-from fastMiddleware.referrer_policy import ReferrerPolicyMiddleware, ReferrerPolicyConfig
-from fastMiddleware.permissions_policy import PermissionsPolicyMiddleware, PermissionsPolicyConfig
-from fastMiddleware.csp_report import CSPReportMiddleware, CSPReportConfig
-from fastMiddleware.replay_prevention import ReplayPreventionMiddleware, ReplayPreventionConfig
-from fastMiddleware.request_signing import RequestSigningMiddleware, RequestSigningConfig
-from fastMiddleware.honeypot import HoneypotMiddleware, HoneypotConfig
-from fastMiddleware.sanitization import SanitizationMiddleware, SanitizationConfig
+from FastMiddleware.security import SecurityHeadersMiddleware, SecurityHeadersConfig
+from FastMiddleware.trusted_host import TrustedHostMiddleware
+from FastMiddleware.csrf import CSRFMiddleware, CSRFConfig
+from FastMiddleware.https_redirect import HTTPSRedirectMiddleware, HTTPSRedirectConfig
+from FastMiddleware.ip_filter import IPFilterMiddleware, IPFilterConfig
+from FastMiddleware.origin import OriginMiddleware, OriginConfig
+from FastMiddleware.webhook import WebhookMiddleware, WebhookConfig
+from FastMiddleware.referrer_policy import ReferrerPolicyMiddleware, ReferrerPolicyConfig
+from FastMiddleware.permissions_policy import PermissionsPolicyMiddleware, PermissionsPolicyConfig
+from FastMiddleware.csp_report import CSPReportMiddleware, CSPReportConfig
+from FastMiddleware.replay_prevention import ReplayPreventionMiddleware, ReplayPreventionConfig
+from FastMiddleware.request_signing import RequestSigningMiddleware, RequestSigningConfig
+from FastMiddleware.honeypot import HoneypotMiddleware, HoneypotConfig
+from FastMiddleware.sanitization import SanitizationMiddleware, SanitizationConfig
 
 # ============================================================================
 # Rate Limiting & Protection
 # ============================================================================
-from fastMiddleware.rate_limit import (
+from FastMiddleware.rate_limit import (
     RateLimitMiddleware,
     RateLimitConfig,
     RateLimitStore,
     InMemoryRateLimitStore,
 )
-from fastMiddleware.quota import QuotaMiddleware, QuotaConfig
-from fastMiddleware.load_shedding import LoadSheddingMiddleware, LoadSheddingConfig
-from fastMiddleware.bulkhead import BulkheadMiddleware, BulkheadConfig
-from fastMiddleware.request_dedup import RequestDedupMiddleware, RequestDedupConfig
-from fastMiddleware.request_coalescing import RequestCoalescingMiddleware, CoalescingConfig
+from FastMiddleware.quota import QuotaMiddleware, QuotaConfig
+from FastMiddleware.load_shedding import LoadSheddingMiddleware, LoadSheddingConfig
+from FastMiddleware.bulkhead import BulkheadMiddleware, BulkheadConfig
+from FastMiddleware.request_dedup import RequestDedupMiddleware, RequestDedupConfig
+from FastMiddleware.request_coalescing import RequestCoalescingMiddleware, CoalescingConfig
 
 # ============================================================================
 # Authentication & Authorization
 # ============================================================================
-from fastMiddleware.authentication import (
+from FastMiddleware.authentication import (
     AuthenticationMiddleware,
     AuthConfig,
     AuthBackend,
     JWTAuthBackend,
     APIKeyAuthBackend,
 )
-from fastMiddleware.basic_auth import BasicAuthMiddleware, BasicAuthConfig
-from fastMiddleware.bearer_auth import BearerAuthMiddleware, BearerAuthConfig
-from fastMiddleware.scope import ScopeMiddleware, ScopeConfig
-from fastMiddleware.route_auth import RouteAuthMiddleware, RouteAuthConfig, RouteAuth
+from FastMiddleware.basic_auth import BasicAuthMiddleware, BasicAuthConfig
+from FastMiddleware.bearer_auth import BearerAuthMiddleware, BearerAuthConfig
+from FastMiddleware.scope import ScopeMiddleware, ScopeConfig
+from FastMiddleware.route_auth import RouteAuthMiddleware, RouteAuthConfig, RouteAuth
 
 # ============================================================================
 # Session & Context
 # ============================================================================
-from fastMiddleware.session import (
+from FastMiddleware.session import (
     SessionMiddleware,
     SessionConfig,
     SessionStore,
     InMemorySessionStore,
     Session,
 )
-from fastMiddleware.request_context import (
+from FastMiddleware.request_context import (
     RequestContextMiddleware,
     get_request_id,
     get_request_context,
 )
-from fastMiddleware.correlation import (
+from FastMiddleware.correlation import (
     CorrelationMiddleware,
     CorrelationConfig,
     get_correlation_id,
 )
-from fastMiddleware.tenant import (
+from FastMiddleware.tenant import (
     TenantMiddleware,
     TenantConfig,
     get_tenant,
     get_tenant_id,
 )
-from fastMiddleware.context import (
+from FastMiddleware.context import (
     ContextMiddleware,
     ContextConfig,
     get_context,
     get_context_value,
     set_context_value,
 )
-from fastMiddleware.request_id_propagation import (
+from FastMiddleware.request_id_propagation import (
     RequestIDPropagationMiddleware,
     RequestIDPropagationConfig,
     get_request_ids,
@@ -106,48 +106,48 @@ from fastMiddleware.request_id_propagation import (
 # ============================================================================
 # Response Handling
 # ============================================================================
-from fastMiddleware.compression import CompressionMiddleware, CompressionConfig
-from fastMiddleware.response_format import ResponseFormatMiddleware, ResponseFormatConfig
-from fastMiddleware.cache import CacheMiddleware, CacheConfig
-from fastMiddleware.etag import ETagMiddleware, ETagConfig
-from fastMiddleware.data_masking import DataMaskingMiddleware, DataMaskingConfig, MaskingRule
-from fastMiddleware.response_cache import ResponseCacheMiddleware, ResponseCacheConfig
-from fastMiddleware.response_signature import ResponseSignatureMiddleware, ResponseSignatureConfig
-from fastMiddleware.hateoas import HATEOASMiddleware, HATEOASConfig, Link
-from fastMiddleware.bandwidth import BandwidthMiddleware, BandwidthConfig
-from fastMiddleware.no_cache import NoCacheMiddleware, NoCacheConfig
-from fastMiddleware.conditional_request import ConditionalRequestMiddleware, ConditionalRequestConfig
-from fastMiddleware.early_hints import EarlyHintsMiddleware, EarlyHintsConfig, EarlyHint
+from FastMiddleware.compression import CompressionMiddleware, CompressionConfig
+from FastMiddleware.response_format import ResponseFormatMiddleware, ResponseFormatConfig
+from FastMiddleware.cache import CacheMiddleware, CacheConfig
+from FastMiddleware.etag import ETagMiddleware, ETagConfig
+from FastMiddleware.data_masking import DataMaskingMiddleware, DataMaskingConfig, MaskingRule
+from FastMiddleware.response_cache import ResponseCacheMiddleware, ResponseCacheConfig
+from FastMiddleware.response_signature import ResponseSignatureMiddleware, ResponseSignatureConfig
+from FastMiddleware.hateoas import HATEOASMiddleware, HATEOASConfig, Link
+from FastMiddleware.bandwidth import BandwidthMiddleware, BandwidthConfig
+from FastMiddleware.no_cache import NoCacheMiddleware, NoCacheConfig
+from FastMiddleware.conditional_request import ConditionalRequestMiddleware, ConditionalRequestConfig
+from FastMiddleware.early_hints import EarlyHintsMiddleware, EarlyHintsConfig, EarlyHint
 
 # ============================================================================
 # Error Handling
 # ============================================================================
-from fastMiddleware.error_handler import ErrorHandlerMiddleware, ErrorConfig
-from fastMiddleware.circuit_breaker import CircuitBreakerMiddleware, CircuitBreakerConfig, CircuitState
-from fastMiddleware.exception_handler import ExceptionHandlerMiddleware, ExceptionHandlerConfig
+from FastMiddleware.error_handler import ErrorHandlerMiddleware, ErrorConfig
+from FastMiddleware.circuit_breaker import CircuitBreakerMiddleware, CircuitBreakerConfig, CircuitState
+from FastMiddleware.exception_handler import ExceptionHandlerMiddleware, ExceptionHandlerConfig
 
 # ============================================================================
 # Health & Monitoring
 # ============================================================================
-from fastMiddleware.health import HealthCheckMiddleware, HealthConfig
-from fastMiddleware.metrics import MetricsMiddleware, MetricsConfig, MetricsCollector
-from fastMiddleware.profiling import ProfilingMiddleware, ProfilingConfig
-from fastMiddleware.audit import AuditMiddleware, AuditConfig, AuditEvent
-from fastMiddleware.response_time import ResponseTimeMiddleware, ResponseTimeConfig, ResponseTimeSLA
-from fastMiddleware.server_timing import (
+from FastMiddleware.health import HealthCheckMiddleware, HealthConfig
+from FastMiddleware.metrics import MetricsMiddleware, MetricsConfig, MetricsCollector
+from FastMiddleware.profiling import ProfilingMiddleware, ProfilingConfig
+from FastMiddleware.audit import AuditMiddleware, AuditConfig, AuditEvent
+from FastMiddleware.response_time import ResponseTimeMiddleware, ResponseTimeConfig, ResponseTimeSLA
+from FastMiddleware.server_timing import (
     ServerTimingMiddleware,
     ServerTimingConfig,
     timing,
     add_timing,
 )
-from fastMiddleware.request_logger import RequestLoggerMiddleware, RequestLoggerConfig
-from fastMiddleware.cost_tracking import (
+from FastMiddleware.request_logger import RequestLoggerMiddleware, RequestLoggerConfig
+from FastMiddleware.cost_tracking import (
     CostTrackingMiddleware,
     CostTrackingConfig,
     get_request_cost,
     add_cost,
 )
-from fastMiddleware.request_sampler import (
+from FastMiddleware.request_sampler import (
     RequestSamplerMiddleware,
     RequestSamplerConfig,
     is_sampled,
@@ -156,7 +156,7 @@ from fastMiddleware.request_sampler import (
 # ============================================================================
 # Idempotency
 # ============================================================================
-from fastMiddleware.idempotency import (
+from FastMiddleware.idempotency import (
     IdempotencyMiddleware,
     IdempotencyConfig,
     IdempotencyStore,
@@ -166,57 +166,57 @@ from fastMiddleware.idempotency import (
 # ============================================================================
 # Maintenance & Lifecycle
 # ============================================================================
-from fastMiddleware.maintenance import MaintenanceMiddleware, MaintenanceConfig
-from fastMiddleware.warmup import WarmupMiddleware, WarmupConfig
-from fastMiddleware.graceful_shutdown import GracefulShutdownMiddleware, GracefulShutdownConfig
-from fastMiddleware.chaos import ChaosMiddleware, ChaosConfig
-from fastMiddleware.slow_response import SlowResponseMiddleware, SlowResponseConfig
+from FastMiddleware.maintenance import MaintenanceMiddleware, MaintenanceConfig
+from FastMiddleware.warmup import WarmupMiddleware, WarmupConfig
+from FastMiddleware.graceful_shutdown import GracefulShutdownMiddleware, GracefulShutdownConfig
+from FastMiddleware.chaos import ChaosMiddleware, ChaosConfig
+from FastMiddleware.slow_response import SlowResponseMiddleware, SlowResponseConfig
 
 # ============================================================================
 # Request Processing
 # ============================================================================
-from fastMiddleware.timeout import TimeoutMiddleware, TimeoutConfig
-from fastMiddleware.request_limit import RequestLimitMiddleware, RequestLimitConfig
-from fastMiddleware.trailing_slash import TrailingSlashMiddleware, TrailingSlashConfig, SlashAction
-from fastMiddleware.content_type import ContentTypeMiddleware, ContentTypeConfig
-from fastMiddleware.header_transform import HeaderTransformMiddleware, HeaderTransformConfig
-from fastMiddleware.request_validator import RequestValidatorMiddleware, RequestValidatorConfig, ValidationRule
-from fastMiddleware.json_schema import JSONSchemaMiddleware, JSONSchemaConfig
-from fastMiddleware.payload_size import PayloadSizeMiddleware, PayloadSizeConfig
-from fastMiddleware.method_override import MethodOverrideMiddleware, MethodOverrideConfig
-from fastMiddleware.request_fingerprint import (
+from FastMiddleware.timeout import TimeoutMiddleware, TimeoutConfig
+from FastMiddleware.request_limit import RequestLimitMiddleware, RequestLimitConfig
+from FastMiddleware.trailing_slash import TrailingSlashMiddleware, TrailingSlashConfig, SlashAction
+from FastMiddleware.content_type import ContentTypeMiddleware, ContentTypeConfig
+from FastMiddleware.header_transform import HeaderTransformMiddleware, HeaderTransformConfig
+from FastMiddleware.request_validator import RequestValidatorMiddleware, RequestValidatorConfig, ValidationRule
+from FastMiddleware.json_schema import JSONSchemaMiddleware, JSONSchemaConfig
+from FastMiddleware.payload_size import PayloadSizeMiddleware, PayloadSizeConfig
+from FastMiddleware.method_override import MethodOverrideMiddleware, MethodOverrideConfig
+from FastMiddleware.request_fingerprint import (
     RequestFingerprintMiddleware,
     FingerprintConfig,
     get_fingerprint,
 )
-from fastMiddleware.request_priority import RequestPriorityMiddleware, PriorityConfig, Priority
+from FastMiddleware.request_priority import RequestPriorityMiddleware, PriorityConfig, Priority
 
 # ============================================================================
 # URL & Routing
 # ============================================================================
-from fastMiddleware.redirect import RedirectMiddleware, RedirectConfig, RedirectRule
-from fastMiddleware.path_rewrite import PathRewriteMiddleware, PathRewriteConfig, RewriteRule
-from fastMiddleware.proxy import ProxyMiddleware, ProxyConfig, ProxyRoute
+from FastMiddleware.redirect import RedirectMiddleware, RedirectConfig, RedirectRule
+from FastMiddleware.path_rewrite import PathRewriteMiddleware, PathRewriteConfig, RewriteRule
+from FastMiddleware.proxy import ProxyMiddleware, ProxyConfig, ProxyRoute
 
 # ============================================================================
 # API Management
 # ============================================================================
-from fastMiddleware.versioning import (
+from FastMiddleware.versioning import (
     VersioningMiddleware,
     VersioningConfig,
     VersionLocation,
     get_api_version,
 )
-from fastMiddleware.deprecation import DeprecationMiddleware, DeprecationConfig, DeprecationInfo
-from fastMiddleware.retry_after import RetryAfterMiddleware, RetryAfterConfig
-from fastMiddleware.api_version_header import APIVersionHeaderMiddleware, APIVersionHeaderConfig
+from FastMiddleware.deprecation import DeprecationMiddleware, DeprecationConfig, DeprecationInfo
+from FastMiddleware.retry_after import RetryAfterMiddleware, RetryAfterConfig
+from FastMiddleware.api_version_header import APIVersionHeaderMiddleware, APIVersionHeaderConfig
 
 # ============================================================================
 # Detection & Analytics
 # ============================================================================
-from fastMiddleware.bot_detection import BotDetectionMiddleware, BotConfig, BotAction
-from fastMiddleware.geoip import GeoIPMiddleware, GeoIPConfig, get_geo_data
-from fastMiddleware.user_agent import (
+from FastMiddleware.bot_detection import BotDetectionMiddleware, BotConfig, BotAction
+from FastMiddleware.geoip import GeoIPMiddleware, GeoIPConfig, get_geo_data
+from FastMiddleware.user_agent import (
     UserAgentMiddleware,
     UserAgentConfig,
     UserAgentInfo,
@@ -226,13 +226,13 @@ from fastMiddleware.user_agent import (
 # ============================================================================
 # Feature Management & Testing
 # ============================================================================
-from fastMiddleware.feature_flag import (
+from FastMiddleware.feature_flag import (
     FeatureFlagMiddleware,
     FeatureFlagConfig,
     get_feature_flags,
     is_feature_enabled,
 )
-from fastMiddleware.ab_testing import (
+from FastMiddleware.ab_testing import (
     ABTestMiddleware,
     ABTestConfig,
     Experiment,
@@ -242,18 +242,18 @@ from fastMiddleware.ab_testing import (
 # ============================================================================
 # Localization & Content Negotiation
 # ============================================================================
-from fastMiddleware.locale import LocaleMiddleware, LocaleConfig, get_locale
-from fastMiddleware.accept_language import (
+from FastMiddleware.locale import LocaleMiddleware, LocaleConfig, get_locale
+from FastMiddleware.accept_language import (
     AcceptLanguageMiddleware,
     AcceptLanguageConfig,
     get_language,
 )
-from fastMiddleware.content_negotiation import (
+from FastMiddleware.content_negotiation import (
     ContentNegotiationMiddleware,
     ContentNegotiationConfig,
     get_negotiated_type,
 )
-from fastMiddleware.client_hints import (
+from FastMiddleware.client_hints import (
     ClientHintsMiddleware,
     ClientHintsConfig,
     get_client_hints,
@@ -262,8 +262,8 @@ from fastMiddleware.client_hints import (
 # ============================================================================
 # IP & Proxy Handling
 # ============================================================================
-from fastMiddleware.real_ip import RealIPMiddleware, RealIPConfig, get_real_ip
-from fastMiddleware.xff_trust import XFFTrustMiddleware, XFFTrustConfig
+from FastMiddleware.real_ip import RealIPMiddleware, RealIPConfig, get_real_ip
+from FastMiddleware.xff_trust import XFFTrustMiddleware, XFFTrustConfig
 
 __version__ = "0.5.0"
 __author__ = "Shiv"

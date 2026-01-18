@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -25,7 +25,7 @@ class RetryAfterConfig:
     
     Example:
         ```python
-        from fastMiddleware import RetryAfterConfig
+        from FastMiddleware import RetryAfterConfig
         
         config = RetryAfterConfig(
             default_retry=60,
@@ -57,7 +57,7 @@ class RetryAfterMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import RetryAfterMiddleware
+        from FastMiddleware import RetryAfterMiddleware
         
         app = FastAPI()
         

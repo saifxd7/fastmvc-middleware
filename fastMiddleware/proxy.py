@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict, List
 from starlette.requests import Request
 from starlette.responses import Response, StreamingResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -47,7 +47,7 @@ class ProxyMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ProxyMiddleware, ProxyRoute
+        from FastMiddleware import ProxyMiddleware, ProxyRoute
         
         app.add_middleware(
             ProxyMiddleware,

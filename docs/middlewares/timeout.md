@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import TimeoutMiddleware, TimeoutConfig
+from FastMiddleware import TimeoutMiddleware, TimeoutConfig
 
 app = FastAPI()
 

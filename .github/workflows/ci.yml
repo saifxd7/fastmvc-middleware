@@ -28,10 +28,10 @@ jobs:
           pip install ruff mypy
 
       - name: Run Ruff linter
-        run: ruff check fastMiddleware tests
+        run: ruff check FastMiddleware tests
 
       - name: Run Ruff formatter check
-        run: ruff format --check fastMiddleware tests
+        run: ruff format --check FastMiddleware tests
 
   security:
     name: Security Scan
@@ -48,7 +48,7 @@ jobs:
         run: pip install bandit[toml]
 
       - name: Run Bandit security scan
-        run: bandit -c pyproject.toml -r fastMiddleware
+        run: bandit -c pyproject.toml -r FastMiddleware
 
   type-check:
     name: Type Check
@@ -67,7 +67,7 @@ jobs:
           pip install mypy starlette pyjwt httpx
 
       - name: Run MyPy
-        run: mypy fastMiddleware --ignore-missing-imports
+        run: mypy FastMiddleware --ignore-missing-imports
 
   test:
     name: Test (Python ${{ matrix.python-version }})
@@ -93,7 +93,7 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest tests/ \
-            --cov=fastMiddleware \
+            --cov=FastMiddleware \
             --cov-report=xml \
             --cov-report=term-missing \
             --cov-fail-under=40 \

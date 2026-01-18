@@ -12,7 +12,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _timings: ContextVar[List[Dict]] = ContextVar("server_timings", default=[])
@@ -73,7 +73,7 @@ class ServerTimingMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ServerTimingMiddleware, timing
+        from FastMiddleware import ServerTimingMiddleware, timing
         
         app.add_middleware(ServerTimingMiddleware)
         

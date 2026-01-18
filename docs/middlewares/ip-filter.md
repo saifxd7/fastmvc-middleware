@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import IPFilterMiddleware, IPFilterConfig
+from FastMiddleware import IPFilterMiddleware, IPFilterConfig
 
 app = FastAPI()
 

@@ -5,7 +5,7 @@ Pluggable authentication middleware supporting JWT tokens and API keys with conf
 ## Installation
 
 ```python
-from fastMiddleware import (
+from FastMiddleware import (
     AuthenticationMiddleware,
     AuthConfig,
     JWTAuthBackend,
@@ -17,7 +17,7 @@ from fastMiddleware import (
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import AuthenticationMiddleware, JWTAuthBackend
+from FastMiddleware import AuthenticationMiddleware, JWTAuthBackend
 
 app = FastAPI()
 
@@ -91,7 +91,7 @@ backend = APIKeyAuthBackend(
 ### JWT Authentication
 
 ```python
-from fastMiddleware import AuthenticationMiddleware, AuthConfig, JWTAuthBackend
+from FastMiddleware import AuthenticationMiddleware, AuthConfig, JWTAuthBackend
 import os
 
 backend = JWTAuthBackend(
@@ -143,7 +143,7 @@ async def protected_route(request: Request):
 ### API Key with Static Keys
 
 ```python
-from fastMiddleware import APIKeyAuthBackend
+from FastMiddleware import APIKeyAuthBackend
 
 backend = APIKeyAuthBackend(
     valid_keys={

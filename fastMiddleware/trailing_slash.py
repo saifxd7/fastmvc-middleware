@@ -11,7 +11,7 @@ from enum import Enum
 from starlette.requests import Request
 from starlette.responses import Response, RedirectResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 class SlashAction(Enum):
@@ -34,7 +34,7 @@ class TrailingSlashConfig:
     
     Example:
         ```python
-        from fastMiddleware import TrailingSlashConfig, SlashAction
+        from FastMiddleware import TrailingSlashConfig, SlashAction
         
         # Remove trailing slashes
         config = TrailingSlashConfig(action=SlashAction.REMOVE)
@@ -74,7 +74,7 @@ class TrailingSlashMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import TrailingSlashMiddleware, SlashAction
+        from FastMiddleware import TrailingSlashMiddleware, SlashAction
         
         app = FastAPI()
         

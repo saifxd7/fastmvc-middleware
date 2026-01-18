@@ -14,7 +14,7 @@ import time
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 class Priority(IntEnum):
@@ -52,7 +52,7 @@ class RequestPriorityMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestPriorityMiddleware, Priority
+        from FastMiddleware import RequestPriorityMiddleware, Priority
         
         app.add_middleware(
             RequestPriorityMiddleware,

@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict, List, Tuple
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -53,7 +53,7 @@ class PathRewriteConfig:
 
 
 class PathRewriteMiddleware(FastMVCMiddleware):
-    """
+    r"""
     Middleware that rewrites request paths.
     
     Transforms request paths based on configured rules
@@ -61,7 +61,7 @@ class PathRewriteMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import PathRewriteMiddleware, RewriteRule
+        from FastMiddleware import PathRewriteMiddleware, RewriteRule
         
         app.add_middleware(
             PathRewriteMiddleware,

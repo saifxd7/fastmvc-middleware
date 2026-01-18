@@ -14,7 +14,7 @@ pip install fastmvc-middleware[all]      # All dependencies
 ## Quick Import
 
 ```python
-from fastMiddleware import (
+from FastMiddleware import (
     # Most commonly used
     CORSMiddleware,
     SecurityHeadersMiddleware,
@@ -360,11 +360,11 @@ from fastMiddleware import (
 ## Module Metadata
 
 ```python
-import fastMiddleware
+import FastMiddleware
 
-print(fastMiddleware.__version__)  # "0.5.0"
-print(fastMiddleware.__author__)   # "Shiv"
-print(fastMiddleware.__email__)    # "shiv@hyyre.dev"
-print(fastMiddleware.__license__)  # "MIT"
-print(fastMiddleware.__url__)      # "https://github.com/hyyre/fastmvc-middleware"
+print(FastMiddleware.__version__)  # "0.5.0"
+print(FastMiddleware.__author__)   # "Shiv"
+print(FastMiddleware.__email__)    # "shiv@hyyre.dev"
+print(FastMiddleware.__license__)  # "MIT"
+print(FastMiddleware.__url__)      # "https://github.com/hyyre/fastmvc-middleware"
 ```

@@ -5,14 +5,14 @@ Built-in health, readiness, and liveness endpoints for Kubernetes and load balan
 ## Installation
 
 ```python
-from fastMiddleware import HealthCheckMiddleware, HealthConfig
+from FastMiddleware import HealthCheckMiddleware, HealthConfig
 ```
 
 ## Quick Start
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import HealthCheckMiddleware
+from FastMiddleware import HealthCheckMiddleware
 
 app = FastAPI()
 

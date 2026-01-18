@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -37,7 +37,7 @@ class GracefulShutdownMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import GracefulShutdownMiddleware
+        from FastMiddleware import GracefulShutdownMiddleware
         
         shutdown_mw = GracefulShutdownMiddleware(app, timeout=30.0)
         

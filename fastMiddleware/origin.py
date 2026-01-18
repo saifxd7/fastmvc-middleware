@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -28,7 +28,7 @@ class OriginConfig:
     
     Example:
         ```python
-        from fastMiddleware import OriginConfig
+        from FastMiddleware import OriginConfig
         
         config = OriginConfig(
             allowed_origins={
@@ -62,7 +62,7 @@ class OriginMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import OriginMiddleware
+        from FastMiddleware import OriginMiddleware
         
         app = FastAPI()
         

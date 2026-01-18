@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -43,7 +43,7 @@ class ReferrerPolicyMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ReferrerPolicyMiddleware
+        from FastMiddleware import ReferrerPolicyMiddleware
         
         app.add_middleware(
             ReferrerPolicyMiddleware,

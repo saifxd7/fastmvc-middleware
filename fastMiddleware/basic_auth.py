@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -39,7 +39,7 @@ class BasicAuthMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import BasicAuthMiddleware
+        from FastMiddleware import BasicAuthMiddleware
         
         app.add_middleware(
             BasicAuthMiddleware,

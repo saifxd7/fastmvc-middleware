@@ -11,7 +11,7 @@ from datetime import datetime
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse, HTMLResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -31,7 +31,7 @@ class MaintenanceConfig:
     
     Example:
         ```python
-        from fastMiddleware import MaintenanceConfig
+        from FastMiddleware import MaintenanceConfig
         
         config = MaintenanceConfig(
             enabled=True,
@@ -72,7 +72,7 @@ class MaintenanceMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import MaintenanceMiddleware, MaintenanceConfig
+        from FastMiddleware import MaintenanceMiddleware, MaintenanceConfig
         
         app = FastAPI()
         

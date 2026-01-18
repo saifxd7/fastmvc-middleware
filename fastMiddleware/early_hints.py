@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -45,7 +45,7 @@ class EarlyHintsMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import EarlyHintsMiddleware, EarlyHint
+        from FastMiddleware import EarlyHintsMiddleware, EarlyHint
         
         app.add_middleware(
             EarlyHintsMiddleware,

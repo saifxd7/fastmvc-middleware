@@ -202,7 +202,7 @@ app.add_middleware(
 All middlewares support configuration via dataclasses:
 
 ```python
-from fastMiddleware import RateLimitMiddleware, RateLimitConfig
+from FastMiddleware import RateLimitMiddleware, RateLimitConfig
 
 config = RateLimitConfig(
     requests_per_minute=100,

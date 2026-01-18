@@ -57,7 +57,7 @@ chmod 600 ~/.pypirc
 
 Update the version in:
 - `pyproject.toml` (line: `version = "X.Y.Z"`)
-- `fastMiddleware/__init__.py` (line: `__version__ = "X.Y.Z"`)
+- `FastMiddleware/__init__.py` (line: `__version__ = "X.Y.Z"`)
 
 ### 2. Update Changelog
 
@@ -68,7 +68,7 @@ Add release notes to `CHANGELOG.md`
 ```bash
 make test
 # or
-pytest --cov=fastMiddleware
+pytest --cov=FastMiddleware
 ```
 
 ### 4. Build the Package
@@ -132,7 +132,7 @@ Go to https://github.com/hyyre/fastmvc-middleware/releases/new and:
 
 ```bash
 pip install fastmvc-middleware
-python -c "import fastMiddleware; print(fastMiddleware.__version__)"
+python -c "import FastMiddleware; print(FastMiddleware.__version__)"
 ```
 
 ## Troubleshooting

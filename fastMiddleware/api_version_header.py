@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -41,7 +41,7 @@ class APIVersionHeaderMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import APIVersionHeaderMiddleware
+        from FastMiddleware import APIVersionHeaderMiddleware
         
         app.add_middleware(
             APIVersionHeaderMiddleware,

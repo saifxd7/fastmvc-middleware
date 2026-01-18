@@ -13,7 +13,7 @@ from starlette.requests import Request
 from starlette.responses import Response, StreamingResponse
 from starlette.datastructures import MutableHeaders
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -28,7 +28,7 @@ class CompressionConfig:
     
     Example:
         ```python
-        from fastMiddleware import CompressionConfig
+        from FastMiddleware import CompressionConfig
         
         config = CompressionConfig(
             minimum_size=500,
@@ -70,7 +70,7 @@ class CompressionMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import CompressionMiddleware, CompressionConfig
+        from FastMiddleware import CompressionMiddleware, CompressionConfig
         
         app = FastAPI()
         

@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 def parse_size(size: str | int) -> int:
@@ -49,7 +49,7 @@ class RequestLimitConfig:
     
     Example:
         ```python
-        from fastMiddleware import RequestLimitConfig
+        from FastMiddleware import RequestLimitConfig
         
         config = RequestLimitConfig(
             max_size="10MB",
@@ -83,7 +83,7 @@ class RequestLimitMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import RequestLimitMiddleware
+        from FastMiddleware import RequestLimitMiddleware
         
         app = FastAPI()
         

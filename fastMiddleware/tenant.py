@@ -11,7 +11,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 # Context variable for tenant
@@ -27,7 +27,7 @@ def get_tenant() -> Dict[str, Any] | None:
     
     Example:
         ```python
-        from fastMiddleware import get_tenant
+        from FastMiddleware import get_tenant
         
         @app.get("/data")
         async def get_data():
@@ -60,7 +60,7 @@ class TenantConfig:
     
     Example:
         ```python
-        from fastMiddleware import TenantConfig
+        from FastMiddleware import TenantConfig
         
         # Header-based
         config = TenantConfig(
@@ -108,7 +108,7 @@ class TenantMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import TenantMiddleware, get_tenant
+        from FastMiddleware import TenantMiddleware, get_tenant
         
         app = FastAPI()
         

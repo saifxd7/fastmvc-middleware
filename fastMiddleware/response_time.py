@@ -12,7 +12,7 @@ from typing import Callable, Awaitable, Set, Dict, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -56,7 +56,7 @@ class ResponseTimeMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ResponseTimeMiddleware, ResponseTimeSLA
+        from FastMiddleware import ResponseTimeMiddleware, ResponseTimeSLA
         
         app.add_middleware(
             ResponseTimeMiddleware,

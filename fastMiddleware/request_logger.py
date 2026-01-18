@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -51,7 +51,7 @@ class RequestLoggerMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestLoggerMiddleware
+        from FastMiddleware import RequestLoggerMiddleware
         
         app.add_middleware(
             RequestLoggerMiddleware,

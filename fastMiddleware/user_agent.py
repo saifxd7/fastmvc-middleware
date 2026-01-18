@@ -12,7 +12,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _ua_ctx: ContextVar[Dict[str, Any] | None] = ContextVar("user_agent", default=None)
@@ -68,7 +68,7 @@ class UserAgentMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import UserAgentMiddleware, get_user_agent
+        from FastMiddleware import UserAgentMiddleware, get_user_agent
         
         app.add_middleware(UserAgentMiddleware)
         

@@ -6,7 +6,7 @@ import pytest
 from fastapi import FastAPI, Request
 from starlette.testclient import TestClient
 
-from fastMiddleware import (
+from FastMiddleware import (
     RequestContextMiddleware,
     get_request_id,
     get_request_context,

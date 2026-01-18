@@ -108,7 +108,7 @@ Prefixes:
 ### 1. Create the middleware file
 
 ```python
-# fastMiddleware/your_middleware.py
+# FastMiddleware/your_middleware.py
 """
 Your Middleware - Brief description.
 
@@ -149,7 +149,7 @@ class YourMiddleware(FastMVCMiddleware):
 
     Example:
         ```python
-        from fastMiddleware import YourMiddleware, YourMiddlewareConfig
+        from FastMiddleware import YourMiddleware, YourMiddlewareConfig
 
         app.add_middleware(
             YourMiddleware,
@@ -226,7 +226,7 @@ from starlette.applications import Starlette
 from starlette.responses import PlainTextResponse
 from starlette.testclient import TestClient
 
-from fastMiddleware import YourMiddleware, YourMiddlewareConfig
+from FastMiddleware import YourMiddleware, YourMiddlewareConfig
 
 
 class TestYourMiddleware:
@@ -274,7 +274,7 @@ pip install fastmvc-middleware
 ## Usage
 
 \`\`\`python
-from fastMiddleware import YourMiddleware
+from FastMiddleware import YourMiddleware
 
 app.add_middleware(YourMiddleware, option1="value")
 \`\`\`

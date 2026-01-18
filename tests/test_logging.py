@@ -7,7 +7,7 @@ import pytest
 from fastapi import FastAPI
 from starlette.testclient import TestClient
 
-from fastMiddleware import LoggingMiddleware
+from FastMiddleware import LoggingMiddleware
 
 
 @pytest.fixture

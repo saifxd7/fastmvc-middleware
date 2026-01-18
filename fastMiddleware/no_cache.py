@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set, List
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -38,7 +38,7 @@ class NoCacheMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import NoCacheMiddleware
+        from FastMiddleware import NoCacheMiddleware
         
         app.add_middleware(
             NoCacheMiddleware,

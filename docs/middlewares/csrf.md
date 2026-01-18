@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import CSRFMiddleware, CSRFConfig
+from FastMiddleware import CSRFMiddleware, CSRFConfig
 
 app = FastAPI()
 

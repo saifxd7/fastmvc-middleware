@@ -15,7 +15,7 @@ from collections import defaultdict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse, PlainTextResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -33,7 +33,7 @@ class ProfilingConfig:
     
     Example:
         ```python
-        from fastMiddleware import ProfilingConfig
+        from FastMiddleware import ProfilingConfig
         
         config = ProfilingConfig(
             enabled=True,  # Enable in dev only!
@@ -134,7 +134,7 @@ class ProfilingMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import ProfilingMiddleware, ProfilingConfig
+        from FastMiddleware import ProfilingMiddleware, ProfilingConfig
         
         app = FastAPI()
         

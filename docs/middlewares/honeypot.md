@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import HoneypotMiddleware, HoneypotConfig
+from FastMiddleware import HoneypotMiddleware, HoneypotConfig
 
 app = FastAPI()
 

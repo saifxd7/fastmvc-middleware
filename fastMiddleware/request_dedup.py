@@ -13,7 +13,7 @@ from typing import Callable, Awaitable, Set, Dict, Any
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -44,7 +44,7 @@ class RequestDedupMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestDedupMiddleware
+        from FastMiddleware import RequestDedupMiddleware
         
         app.add_middleware(
             RequestDedupMiddleware,

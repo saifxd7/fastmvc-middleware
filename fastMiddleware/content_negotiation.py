@@ -11,7 +11,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 _content_type_ctx: ContextVar[str | None] = ContextVar("negotiated_type", default=None)
@@ -51,7 +51,7 @@ class ContentNegotiationMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import ContentNegotiationMiddleware, get_negotiated_type
+        from FastMiddleware import ContentNegotiationMiddleware, get_negotiated_type
         
         app.add_middleware(
             ContentNegotiationMiddleware,

@@ -14,7 +14,7 @@ import asyncio
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -33,7 +33,7 @@ class LoadSheddingConfig:
     
     Example:
         ```python
-        from fastMiddleware import LoadSheddingConfig
+        from FastMiddleware import LoadSheddingConfig
         
         config = LoadSheddingConfig(
             max_concurrent=100,
@@ -68,7 +68,7 @@ class LoadSheddingMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import LoadSheddingMiddleware
+        from FastMiddleware import LoadSheddingMiddleware
         
         app = FastAPI()
         

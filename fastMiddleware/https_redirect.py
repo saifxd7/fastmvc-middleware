@@ -10,7 +10,7 @@ from typing import Callable, Awaitable, Set
 from starlette.requests import Request
 from starlette.responses import Response, RedirectResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -26,7 +26,7 @@ class HTTPSRedirectConfig:
     
     Example:
         ```python
-        from fastMiddleware import HTTPSRedirectConfig
+        from FastMiddleware import HTTPSRedirectConfig
         
         config = HTTPSRedirectConfig(
             redirect_code=301,
@@ -57,7 +57,7 @@ class HTTPSRedirectMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import HTTPSRedirectMiddleware
+        from FastMiddleware import HTTPSRedirectMiddleware
         
         app = FastAPI()
         

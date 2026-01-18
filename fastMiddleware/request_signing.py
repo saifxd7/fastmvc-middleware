@@ -13,7 +13,7 @@ from typing import Callable, Awaitable, Set, Dict
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -44,7 +44,7 @@ class RequestSigningMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import RequestSigningMiddleware
+        from FastMiddleware import RequestSigningMiddleware
         
         app.add_middleware(
             RequestSigningMiddleware,

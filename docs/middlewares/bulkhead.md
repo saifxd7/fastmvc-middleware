@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import BulkheadMiddleware, BulkheadConfig
+from FastMiddleware import BulkheadMiddleware, BulkheadConfig
 
 app = FastAPI()
 

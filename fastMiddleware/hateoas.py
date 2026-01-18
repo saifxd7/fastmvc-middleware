@@ -11,7 +11,7 @@ from typing import Callable, Awaitable, Set, Dict, List, Any
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -53,7 +53,7 @@ class HATEOASMiddleware(FastMVCMiddleware):
     
     Example:
         ```python
-        from fastMiddleware import HATEOASMiddleware, Link
+        from FastMiddleware import HATEOASMiddleware, Link
         
         app.add_middleware(
             HATEOASMiddleware,

@@ -12,7 +12,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 # Context variable for API version
@@ -28,7 +28,7 @@ def get_api_version() -> str | None:
     
     Example:
         ```python
-        from fastMiddleware import get_api_version
+        from FastMiddleware import get_api_version
         
         @app.get("/users")
         async def get_users():
@@ -65,7 +65,7 @@ class VersioningConfig:
     
     Example:
         ```python
-        from fastMiddleware import VersioningConfig, VersionLocation
+        from FastMiddleware import VersioningConfig, VersionLocation
         
         config = VersioningConfig(
             location=VersionLocation.HEADER,
@@ -103,7 +103,7 @@ class VersioningMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import VersioningMiddleware, VersionLocation, get_api_version
+        from FastMiddleware import VersioningMiddleware, VersionLocation, get_api_version
         
         app = FastAPI()
         

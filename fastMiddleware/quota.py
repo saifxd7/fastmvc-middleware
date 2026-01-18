@@ -13,7 +13,7 @@ import asyncio
 from starlette.requests import Request
 from starlette.responses import Response, JSONResponse
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 @dataclass
@@ -31,7 +31,7 @@ class QuotaConfig:
     
     Example:
         ```python
-        from fastMiddleware import QuotaConfig
+        from FastMiddleware import QuotaConfig
         
         config = QuotaConfig(
             default_quota=1000,  # 1000 requests per day
@@ -65,7 +65,7 @@ class QuotaMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import QuotaMiddleware, QuotaConfig
+        from FastMiddleware import QuotaMiddleware, QuotaConfig
         
         app = FastAPI()
         

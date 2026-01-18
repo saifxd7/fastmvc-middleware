@@ -16,7 +16,7 @@ pip install fastmvc-middleware
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import WarmupMiddleware, WarmupConfig
+from FastMiddleware import WarmupMiddleware, WarmupConfig
 
 app = FastAPI()
 

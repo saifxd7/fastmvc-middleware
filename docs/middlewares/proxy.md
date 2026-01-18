@@ -18,7 +18,7 @@ pip install fastmvc-middleware[all]
 
 ```python
 from fastapi import FastAPI
-from fastMiddleware import ProxyMiddleware, ProxyConfig, ProxyRoute
+from FastMiddleware import ProxyMiddleware, ProxyConfig, ProxyRoute
 
 app = FastAPI()
 

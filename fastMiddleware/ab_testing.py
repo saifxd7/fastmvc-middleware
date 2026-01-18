@@ -13,7 +13,7 @@ from contextvars import ContextVar
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastMiddleware.base import FastMVCMiddleware
+from FastMiddleware.base import FastMVCMiddleware
 
 
 # Context variable for A/B test assignments
@@ -32,7 +32,7 @@ def get_variant(experiment: str) -> str | None:
     
     Example:
         ```python
-        from fastMiddleware import get_variant
+        from FastMiddleware import get_variant
         
         @app.get("/checkout")
         async def checkout():
@@ -75,7 +75,7 @@ class ABTestConfig:
     
     Example:
         ```python
-        from fastMiddleware import ABTestConfig, Experiment
+        from FastMiddleware import ABTestConfig, Experiment
         
         config = ABTestConfig(
             experiments=[
@@ -116,7 +116,7 @@ class ABTestMiddleware(FastMVCMiddleware):
     Example:
         ```python
         from fastapi import FastAPI
-        from fastMiddleware import ABTestMiddleware, Experiment, get_variant
+        from FastMiddleware import ABTestMiddleware, Experiment, get_variant
         
         app = FastAPI()
         
