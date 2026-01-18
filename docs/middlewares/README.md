@@ -1,222 +1,138 @@
 # Middleware Documentation
 
-Complete reference for all 94 middlewares in FastMVC Middleware.
+Complete documentation for all 94+ middlewares in FastMVC Middleware.
 
-## Prerequisites
+## 📚 Documentation Index
 
-| Symbol | Meaning |
-|--------|---------|
-| ✅ | No additional dependencies (only `starlette`) |
-| 🔑 | Requires `pip install fastmvc-middleware[jwt]` |
-| 🌐 | Requires `pip install fastmvc-middleware[proxy]` |
+### Core Middlewares
+- [CORSMiddleware](cors.md) - Cross-Origin Resource Sharing
+- [LoggingMiddleware](logging.md) - Structured request/response logging
+- [TimingMiddleware](timing.md) - Response timing headers
+- [RequestIDMiddleware](request-id.md) - Unique request ID generation
 
-## Middleware Index
+### Security
+- [SecurityHeadersMiddleware](security-headers.md) - OWASP security headers
+- [CSRFMiddleware](csrf.md) - CSRF protection
+- [HTTPSRedirectMiddleware](https-redirect.md) - HTTP to HTTPS redirect
+- [IPFilterMiddleware](ip-filter.md) - IP whitelist/blacklist
+- [TrustedHostMiddleware](trusted-host.md) - Host header validation
+- [OriginMiddleware](origin.md) - Origin header validation
+- [WebhookMiddleware](webhook.md) - Webhook signature validation
+- [ReferrerPolicyMiddleware](referrer-policy.md) - Referrer-Policy header
+- [PermissionsPolicyMiddleware](permissions-policy.md) - Feature permissions
+- [CSPReportMiddleware](csp-report.md) - CSP violation reports
+- [HoneypotMiddleware](honeypot.md) - Trap malicious requests
+- [SanitizationMiddleware](sanitization.md) - Input sanitization
+- [ReplayPreventionMiddleware](replay-prevention.md) - Prevent replay attacks
+- [RequestSigningMiddleware](request-signing.md) - HMAC signature validation
+- [ResponseSignatureMiddleware](response-signature.md) - Sign responses
 
-### 🔒 Security (14)
+### Rate Limiting & Protection
+- [RateLimitMiddleware](rate-limit.md) - Request rate limiting
+- [QuotaMiddleware](quota.md) - Usage quota enforcement
+- [LoadSheddingMiddleware](load-shedding.md) - Load shedding
+- [BulkheadMiddleware](bulkhead.md) - Bulkhead pattern
+- [RequestDedupMiddleware](request-dedup.md) - Request deduplication
+- [RequestCoalescingMiddleware](request-coalescing.md) - Request coalescing
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [SecurityHeadersMiddleware](security-headers.md) | ✅ | OWASP security headers |
-| [CORSMiddleware](cors.md) | ✅ | Cross-Origin Resource Sharing |
-| [CSRFMiddleware](csrf.md) | ✅ | CSRF protection |
-| [HTTPSRedirectMiddleware](https-redirect.md) | ✅ | HTTP to HTTPS redirect |
-| [IPFilterMiddleware](ip-filter.md) | ✅ | IP whitelist/blacklist |
-| [TrustedHostMiddleware](trusted-host.md) | ✅ | Host header validation |
-| [OriginMiddleware](origin.md) | ✅ | Origin header validation |
-| [WebhookMiddleware](webhook.md) | ✅ | Webhook signature validation |
-| [ReferrerPolicyMiddleware](referrer-policy.md) | ✅ | Referrer-Policy header |
-| [PermissionsPolicyMiddleware](permissions-policy.md) | ✅ | Browser permissions |
-| [CSPReportMiddleware](csp-report.md) | ✅ | CSP violation reports |
-| [HoneypotMiddleware](honeypot.md) | ✅ | Honeypot traps |
-| [SanitizationMiddleware](sanitization.md) | ✅ | Input sanitization |
-| [ReplayPreventionMiddleware](replay-prevention.md) | ✅ | Replay attack prevention |
-| [RequestSigningMiddleware](request-signing.md) | ✅ | HMAC request signing |
+### Authentication & Authorization
+- [AuthenticationMiddleware](authentication.md) - JWT/API key auth
+- [BasicAuthMiddleware](basic-auth.md) - HTTP Basic auth
+- [BearerAuthMiddleware](bearer-auth.md) - Bearer token auth
+- [ScopeMiddleware](scope.md) - OAuth scope validation
+- [RouteAuthMiddleware](route-auth.md) - Per-route auth rules
 
-### 🔐 Authentication (6)
+### Session & Context
+- [SessionMiddleware](session.md) - Server-side sessions
+- [RequestContextMiddleware](request-context.md) - Request context
+- [CorrelationMiddleware](correlation.md) - Correlation IDs
+- [TenantMiddleware](tenant.md) - Multi-tenancy
+- [ContextMiddleware](context.md) - Shared context values
+- [RequestIDPropagationMiddleware](request-id-propagation.md) - ID propagation
+- [RealIPMiddleware](real-ip.md) - Extract real IP
+- [XFFTrustMiddleware](xff-trust.md) - X-Forwarded-For handling
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [AuthenticationMiddleware](authentication.md) | 🔑 | JWT/API Key auth |
-| [BasicAuthMiddleware](basic-auth.md) | ✅ | HTTP Basic auth |
-| [BearerAuthMiddleware](bearer-auth.md) | ✅ | Bearer token auth |
-| [ScopeMiddleware](scope.md) | ✅ | OAuth scope validation |
-| [RouteAuthMiddleware](route-auth.md) | ✅ | Per-route auth |
+### Response Handling
+- [CompressionMiddleware](compression.md) - GZip compression
+- [CacheMiddleware](cache.md) - HTTP caching headers
+- [ETagMiddleware](etag.md) - ETag generation
+- [ResponseCacheMiddleware](response-cache.md) - In-memory caching
+- [ResponseFormatMiddleware](response-format.md) - Response formatting
+- [DataMaskingMiddleware](data-masking.md) - Mask sensitive data
+- [HATEOASMiddleware](hateoas.md) - Hypermedia links
+- [BandwidthMiddleware](bandwidth.md) - Bandwidth throttling
+- [NoCacheMiddleware](no-cache.md) - Disable caching
+- [ConditionalRequestMiddleware](conditional-request.md) - 304 handling
+- [EarlyHintsMiddleware](early-hints.md) - HTTP 103 Early Hints
 
-### 📊 Observability (10)
+### Error Handling
+- [ErrorHandlerMiddleware](error-handler.md) - Error formatting
+- [ExceptionHandlerMiddleware](exception-handler.md) - Custom handlers
+- [CircuitBreakerMiddleware](circuit-breaker.md) - Circuit breaker
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [LoggingMiddleware](logging.md) | ✅ | Request/response logging |
-| [TimingMiddleware](timing.md) | ✅ | Response timing |
-| [RequestIDMiddleware](request-id.md) | ✅ | Request ID generation |
-| [RequestContextMiddleware](request-context.md) | ✅ | Async-safe context |
-| [MetricsMiddleware](metrics.md) | ✅ | Prometheus metrics |
-| [ProfilingMiddleware](profiling.md) | ✅ | Performance profiling |
-| [AuditMiddleware](audit.md) | ✅ | Audit logging |
-| [ServerTimingMiddleware](server-timing.md) | ✅ | Server-Timing header |
-| [RequestLoggerMiddleware](request-logger.md) | ✅ | Access logging |
-| [CostTrackingMiddleware](cost-tracking.md) | ✅ | Request cost tracking |
-| [RequestSamplerMiddleware](request-sampler.md) | ✅ | Request sampling |
+### Health & Monitoring
+- [HealthCheckMiddleware](health.md) - Health endpoints
+- [MetricsMiddleware](metrics.md) - Prometheus metrics
+- [ProfilingMiddleware](profiling.md) - Request profiling
+- [AuditMiddleware](audit.md) - Audit logging
+- [ServerTimingMiddleware](server-timing.md) - Server-Timing header
+- [RequestLoggerMiddleware](request-logger.md) - Access logging
+- [ResponseTimeMiddleware](response-time.md) - SLA monitoring
+- [CostTrackingMiddleware](cost-tracking.md) - Request cost tracking
+- [RequestSamplerMiddleware](request-sampler.md) - Request sampling
 
-### 🛡️ Resilience (10)
+### Idempotency
+- [IdempotencyMiddleware](idempotency.md) - Idempotency keys
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [RateLimitMiddleware](rate-limit.md) | ✅ | Rate limiting |
-| [CircuitBreakerMiddleware](circuit-breaker.md) | ✅ | Circuit breaker |
-| [BulkheadMiddleware](bulkhead.md) | ✅ | Bulkhead isolation |
-| [LoadSheddingMiddleware](load-shedding.md) | ✅ | Load shedding |
-| [TimeoutMiddleware](timeout.md) | ✅ | Request timeout |
-| [ErrorHandlerMiddleware](error-handler.md) | ✅ | Error formatting |
-| [ExceptionHandlerMiddleware](exception-handler.md) | ✅ | Exception handling |
-| [GracefulShutdownMiddleware](graceful-shutdown.md) | ✅ | Graceful shutdown |
-| [RequestDedupMiddleware](request-dedup.md) | ✅ | Request deduplication |
-| [RequestCoalescingMiddleware](request-coalescing.md) | ✅ | Request coalescing |
+### Maintenance & Lifecycle
+- [MaintenanceMiddleware](maintenance.md) - Maintenance mode
+- [WarmupMiddleware](warmup.md) - Container warmup
+- [GracefulShutdownMiddleware](graceful-shutdown.md) - Graceful shutdown
+- [ChaosMiddleware](chaos.md) - Chaos engineering
+- [SlowResponseMiddleware](slow-response.md) - Artificial delays
 
-### ⚡ Performance (10)
+### Request Processing
+- [TimeoutMiddleware](timeout.md) - Request timeouts
+- [RequestLimitMiddleware](request-limit.md) - Body size limits
+- [PayloadSizeMiddleware](payload-size.md) - Request/response limits
+- [ContentTypeMiddleware](content-type.md) - Content-Type validation
+- [RequestValidatorMiddleware](request-validator.md) - Request validation
+- [JSONSchemaMiddleware](json-schema.md) - JSON Schema validation
+- [TrailingSlashMiddleware](trailing-slash.md) - Trailing slash handling
+- [MethodOverrideMiddleware](method-override.md) - HTTP method override
+- [HeaderTransformMiddleware](header-transform.md) - Header transformation
+- [RequestFingerprintMiddleware](request-fingerprint.md) - Request fingerprints
+- [RequestPriorityMiddleware](request-priority.md) - Request prioritization
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [CompressionMiddleware](compression.md) | ✅ | GZip compression |
-| [CacheMiddleware](cache.md) | ✅ | HTTP caching |
-| [ETagMiddleware](etag.md) | ✅ | ETag generation |
-| [ResponseCacheMiddleware](response-cache.md) | ✅ | In-memory cache |
-| [BandwidthMiddleware](bandwidth.md) | ✅ | Bandwidth throttling |
-| [NoCacheMiddleware](no-cache.md) | ✅ | Disable caching |
-| [ConditionalRequestMiddleware](conditional-request.md) | ✅ | If-None-Match |
-| [EarlyHintsMiddleware](early-hints.md) | ✅ | HTTP 103 hints |
-| [ResponseSignatureMiddleware](response-signature.md) | ✅ | Response signing |
+### Routing
+- [RedirectMiddleware](redirect.md) - URL redirects
+- [PathRewriteMiddleware](path-rewrite.md) - Path rewriting
+- [ProxyMiddleware](proxy.md) - Reverse proxy
 
-### 🔧 Operations (5)
+### API Management
+- [VersioningMiddleware](versioning.md) - API versioning
+- [DeprecationMiddleware](deprecation.md) - Deprecation warnings
+- [RetryAfterMiddleware](retry-after.md) - Retry-After headers
+- [APIVersionHeaderMiddleware](api-version-header.md) - Version headers
+- [ContentNegotiationMiddleware](content-negotiation.md) - Content negotiation
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [HealthCheckMiddleware](health.md) | ✅ | Health endpoints |
-| [MaintenanceMiddleware](maintenance.md) | ✅ | Maintenance mode |
-| [WarmupMiddleware](warmup.md) | ✅ | Container warmup |
-| [ChaosMiddleware](chaos.md) | ✅ | Chaos engineering |
-| [SlowResponseMiddleware](slow-response.md) | ✅ | Artificial delays |
+### Detection & Analytics
+- [BotDetectionMiddleware](bot-detection.md) - Bot detection
+- [UserAgentMiddleware](user-agent.md) - User-Agent parsing
+- [GeoIPMiddleware](geoip.md) - GeoIP detection
+- [ClientHintsMiddleware](client-hints.md) - Client hints
 
-### 🌐 API Management (7)
+### Feature Management
+- [FeatureFlagMiddleware](feature-flag.md) - Feature flags
+- [ABTestMiddleware](ab-testing.md) - A/B testing
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [VersioningMiddleware](versioning.md) | ✅ | API versioning |
-| [DeprecationMiddleware](deprecation.md) | ✅ | Deprecation warnings |
-| [RetryAfterMiddleware](retry-after.md) | ✅ | Retry-After headers |
-| [APIVersionHeaderMiddleware](api-version-header.md) | ✅ | Version headers |
-| [ContentNegotiationMiddleware](content-negotiation.md) | ✅ | Accept negotiation |
-| [JSONSchemaMiddleware](json-schema.md) | ✅ | JSON Schema validation |
-| [HATEOASMiddleware](hateoas.md) | ✅ | Hypermedia links |
+### Localization
+- [LocaleMiddleware](locale.md) - Locale detection
+- [AcceptLanguageMiddleware](accept-language.md) - Language negotiation
 
-### 👤 Detection (5)
+## 🚀 Quick Links
 
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [BotDetectionMiddleware](bot-detection.md) | ✅ | Bot detection |
-| [UserAgentMiddleware](user-agent.md) | ✅ | User-Agent parsing |
-| [GeoIPMiddleware](geoip.md) | ✅ | GeoIP extraction |
-| [ClientHintsMiddleware](client-hints.md) | ✅ | Client Hints |
-| [RequestFingerprintMiddleware](request-fingerprint.md) | ✅ | Fingerprinting |
-
-### 🧪 Testing (2)
-
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [FeatureFlagMiddleware](feature-flag.md) | ✅ | Feature flags |
-| [ABTestMiddleware](ab-testing.md) | ✅ | A/B testing |
-
-### 🌍 Localization (2)
-
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [LocaleMiddleware](locale.md) | ✅ | Locale detection |
-| [AcceptLanguageMiddleware](accept-language.md) | ✅ | Language negotiation |
-
-### 🔀 Routing (7)
-
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [RedirectMiddleware](redirect.md) | ✅ | URL redirects |
-| [PathRewriteMiddleware](path-rewrite.md) | ✅ | Path rewriting |
-| [ProxyMiddleware](proxy.md) | 🌐 | Reverse proxy |
-| [MethodOverrideMiddleware](method-override.md) | ✅ | Method override |
-| [TrailingSlashMiddleware](trailing-slash.md) | ✅ | Trailing slash |
-| [HeaderTransformMiddleware](header-transform.md) | ✅ | Header transformation |
-| [ContentTypeMiddleware](content-type.md) | ✅ | Content-Type validation |
-
-### 🆔 Context (8)
-
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [SessionMiddleware](session.md) | ✅ | Server-side sessions |
-| [TenantMiddleware](tenant.md) | ✅ | Multi-tenancy |
-| [CorrelationMiddleware](correlation.md) | ✅ | Correlation IDs |
-| [RequestIDPropagationMiddleware](request-id-propagation.md) | ✅ | ID propagation |
-| [ContextMiddleware](context.md) | ✅ | Shared context |
-| [RealIPMiddleware](real-ip.md) | ✅ | Real IP extraction |
-| [XFFTrustMiddleware](xff-trust.md) | ✅ | XFF trust |
-
-### 📄 Additional (8)
-
-| Middleware | Prerequisites | Description |
-|------------|--------------|-------------|
-| [DataMaskingMiddleware](data-masking.md) | ✅ | Sensitive data masking |
-| [QuotaMiddleware](quota.md) | ✅ | Usage quotas |
-| [IdempotencyMiddleware](idempotency.md) | ✅ | Idempotency keys |
-| [RequestLimitMiddleware](request-limit.md) | ✅ | Body size limits |
-| [PayloadSizeMiddleware](payload-size.md) | ✅ | Payload limits |
-| [RequestValidatorMiddleware](request-validator.md) | ✅ | Request validation |
-| [ResponseTimeMiddleware](response-time.md) | ✅ | SLA monitoring |
-| [RequestPriorityMiddleware](request-priority.md) | ✅ | Request priority |
-
-## Common Patterns
-
-### Recommended Middleware Order
-
-```python
-# Order: First added = Last executed (outermost to innermost)
-app.add_middleware(CompressionMiddleware)      # 8. Compress response
-app.add_middleware(ResponseTimeMiddleware)     # 7. Track timing
-app.add_middleware(LoggingMiddleware)          # 6. Log request/response
-app.add_middleware(ErrorHandlerMiddleware)     # 5. Handle errors
-app.add_middleware(AuthenticationMiddleware)   # 4. Authenticate
-app.add_middleware(RateLimitMiddleware)        # 3. Rate limit
-app.add_middleware(SecurityHeadersMiddleware)  # 2. Add security headers
-app.add_middleware(RequestIDMiddleware)        # 1. Generate request ID
-```
-
-### Excluding Paths
-
-All middlewares support path exclusion:
-
-```python
-app.add_middleware(
-    AuthenticationMiddleware,
-    exclude_paths={"/health", "/login", "/public/*"},
-)
-```
-
-### Configuration Objects
-
-All middlewares support configuration via dataclasses:
-
-```python
-from FastMiddleware import RateLimitMiddleware, RateLimitConfig
-
-config = RateLimitConfig(
-    requests_per_minute=100,
-    burst_size=10,
-)
-app.add_middleware(RateLimitMiddleware, config=config)
-```
-
-Or via keyword arguments:
-
-```python
-app.add_middleware(
-    RateLimitMiddleware,
-    requests_per_minute=100,
-    burst_size=10,
-)
-```
+- [Main README](../../README.md)
+- [API Reference](../API.md)
+- [Examples](../EXAMPLES.md)
+- [Contributing](../../CONTRIBUTING.md)
